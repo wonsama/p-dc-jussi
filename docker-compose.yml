@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  jussi:
+    restart: "always"
+    image: "steemit/jussi:latest"
+    ports:
+      - "8080:8080"
+    environment:
+      JUSSI_UPSTREAM_CONFIG_FILE: /app/config.json
+      JUSSI_REDIS_URL: redis://redis1:6379
+    volumes:
+      - ./config.json:/app/config.json
+  redis1:
+    restart: "always"
+    image: "redis:latest"
+    volumes: -./redis1:/data
