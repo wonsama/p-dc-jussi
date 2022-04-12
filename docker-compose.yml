@@ -13,4 +13,5 @@ services:
   redis1:
     restart: "always"
     image: "redis:latest"
-    volumes: -./redis1:/data
+    volumes:
+      - ./redis1:/data
