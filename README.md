@@ -46,7 +46,15 @@ docker-compose up -d
 
 ```
 
-## StatsD
+## 참조 : jussi_num
+
+> jussi_num 이 의미 하는 것은 누군가가 해당 API 를 호출하는 경우 해당 시점의 블록 넘버로 업데이트가 된다.
+> 최초에는 "jussi_num":20000000 으로 시작함.
+> 만약 docker container 를 내리는 경우에도 해당 "jussi_num":20000000 로 초기화 된다.
+
+`{"status":"OK","datetime":"2022-04-12T06:01:09.807158","source_commit":"ae6c6c77601436e496a8816ece2cbc6e26fbe3c2","docker_tag":"latest","jussi_num":63237177}`
+
+## 참조 : StatsD
 
 > https://planbs.tistory.com/entry/StatsD
 
